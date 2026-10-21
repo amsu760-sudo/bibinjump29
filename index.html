@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<title>Flappy Bibin</title>
+<meta name="theme-color" content="#70c5ce">
+<link rel="icon" href="assets/bird.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="wrap">
+  <canvas id="game" width="360" height="640"></canvas>
+
+  <div id="hud" hidden>
+    <div id="score">0</div>
+  </div>
+
+  <div id="toast" hidden></div>
+
+  <!-- start screen -->
+  <div id="start" class="panel">
+    <img src="assets/title.png" alt="Nee oombi myre" class="title">
+    <p class="blink">TAP TO FLAP</p>
+    <p class="small">Score 5 and 12 to unlock the ugly photos 📸</p>
+  </div>
+
+  <!-- game over screen -->
+  <div id="over" class="panel" hidden>
+    <h1 id="overMsg">GAME OVER</h1>
+    <div class="scores">
+      <div><span>SCORE</span><b id="finalScore">0</b></div>
+      <div><span>BEST</span><b id="bestScore">0</b></div>
+    </div>
+    <div id="gallery"></div>
+    <button id="retry">TRY AGAIN</button>
+  </div>
+
+  <div id="lightbox" hidden><img alt=""><span>tap to close</span></div>
+</div>
+<script src="game.js"></script>
+</body>
+</html>
